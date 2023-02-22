@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html" class="logo">B-Songs</a>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Our Products</a></li>
+                <li><a href="#">Connect</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>My Music</h2>
+            <div class="col">
+                <img src="images/previous.png" class="micon">
+                <img src="images/play.png" id="icon">
+                <img src="images/next.png" class="micon">
+                <!-- <img src="images/pause.png" class="icon"> -->
+            </div>
+        </div>
+
+    </div>
+
+    <audio id="mySong">
+        <source src="music/call.mp3" type="audio/mp3"/>
+ 
+       </audio>   <br> <br>
+
+        <script>
+            var mySong = document.getElementById("mySong");
+            var icon = document.getElementById("icon");
+
+                icon.onclick = function(){
+                        if(mySong.paused){
+                            mySong.play();
+                            icon.src = "images/pause.png";
+                        }
+                        else{
+                            mySong.pause();
+                            icon.src = "images/play.png";
+                        }
+                }
+        </script>
+
+
+
+</body>
+</html>
